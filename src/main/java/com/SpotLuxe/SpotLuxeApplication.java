@@ -16,4 +16,3 @@ public class SpotLuxeApplication {
         SpringApplication.run(SpotLuxeApplication.class, args);
     }
 
-}
