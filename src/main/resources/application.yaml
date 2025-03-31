@@ -6,12 +6,12 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/spotluxe?allowPublicKeyRetrieval=true&useSSL=false
-    username: root
-    password: ssvgg
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   redis:
     host: 192.168.25.130
     port: 6379
-    password: ssvggredis050619
+    password: ${REDIS_PASSWORD}
     lettuce:
       pool:
         max-active: 10
