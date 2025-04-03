@@ -1,12 +1,7 @@
 package com.SpotLuxe.service.impl;
 
-import cn.hutool.core.util.BooleanUtil;
-import cn.hutool.core.util.StrUtil;
-import cn.hutool.json.JSONObject;
-import cn.hutool.json.JSONUtil;
 import com.SpotLuxe.dto.Result;
-import com.SpotLuxe.utils.CacheClient;
-import com.SpotLuxe.utils.RedisData;
+import com.SpotLuxe.common.utils.CacheClient;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.SpotLuxe.entity.Shop;
 import com.SpotLuxe.mapper.ShopMapper;
@@ -17,12 +12,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
-import java.time.LocalDateTime;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import static com.SpotLuxe.utils.RedisConstants.*;
+import static com.SpotLuxe.common.constant.RedisConstants.CACHE_SHOP_KEY;
 
 /**
  * <p>

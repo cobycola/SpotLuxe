@@ -1,4 +1,4 @@
-package com.SpotLuxe.utils;
+package com.SpotLuxe.common.utils;
 
 import cn.hutool.core.lang.UUID;
 import org.springframework.core.io.ClassPathResource;
@@ -21,7 +21,7 @@ public class SimpleRedisLock {
     private static final DefaultRedisScript<Long> UNLOCK_SCRIPT;
     static{
         UNLOCK_SCRIPT = new DefaultRedisScript<>();
-        UNLOCK_SCRIPT.setLocation(new ClassPathResource("unlock.lua"));
+        UNLOCK_SCRIPT.setLocation(new ClassPathResource("scripts/unlock.lua"));
         UNLOCK_SCRIPT.setResultType(Long.class);
     }
 

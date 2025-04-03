@@ -1,4 +1,4 @@
-package com.SpotLuxe.utils;
+package com.SpotLuxe.common.utils;
 
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;

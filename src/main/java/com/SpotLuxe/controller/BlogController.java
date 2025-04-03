@@ -1,19 +1,14 @@
 package com.SpotLuxe.controller;
 
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.SpotLuxe.dto.Result;
 import com.SpotLuxe.dto.UserDTO;
 import com.SpotLuxe.entity.Blog;
-import com.SpotLuxe.entity.User;
 import com.SpotLuxe.service.IBlogService;
-import com.SpotLuxe.service.IUserService;
-import com.SpotLuxe.utils.SystemConstants;
-import com.SpotLuxe.utils.UserHolder;
+import com.SpotLuxe.security.context.UserHolder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * <p>

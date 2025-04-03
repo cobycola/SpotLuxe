@@ -1,4 +1,4 @@
-package com.SpotLuxe.utils;
+package com.SpotLuxe.common.constant;
 
 public class SystemConstants {
     public static final String IMAGE_UPLOAD_DIR = "D:\\NGINX\\nginx-1.18.0\\html\\hmdp\\imgs";

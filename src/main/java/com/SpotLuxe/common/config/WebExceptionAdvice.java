@@ -1,4 +1,4 @@
-package com.SpotLuxe.config;
+package com.SpotLuxe.common.config;
 
 import com.SpotLuxe.dto.Result;
 import lombok.extern.slf4j.Slf4j;

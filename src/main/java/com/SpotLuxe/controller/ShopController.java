@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.SpotLuxe.dto.Result;
 import com.SpotLuxe.entity.Shop;
 import com.SpotLuxe.service.IShopService;
-import com.SpotLuxe.utils.SystemConstants;
+import com.SpotLuxe.common.constant.SystemConstants;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

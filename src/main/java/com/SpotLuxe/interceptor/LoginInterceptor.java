@@ -1,18 +1,10 @@
-package com.SpotLuxe.utils;
+package com.SpotLuxe.interceptor;
 
-import cn.hutool.core.bean.BeanUtil;
-import cn.hutool.core.util.StrUtil;
-import com.SpotLuxe.dto.UserDTO;
-import org.springframework.data.redis.core.StringRedisTemplate;
+import com.SpotLuxe.security.context.UserHolder;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import java.util.Map;
-
-import static com.SpotLuxe.utils.RedisConstants.LOGIN_USER_KEY;
 
 public class LoginInterceptor implements HandlerInterceptor {
 

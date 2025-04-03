@@ -1,6 +1,5 @@
 package com.SpotLuxe.service.impl;
 
-import cn.hutool.core.lang.UUID;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import com.SpotLuxe.dto.Result;
@@ -9,17 +8,15 @@ import com.SpotLuxe.entity.ShopType;
 import com.SpotLuxe.mapper.ShopTypeMapper;
 import com.SpotLuxe.service.IShopTypeService;
 import lombok.extern.slf4j.Slf4j;
-import org.redisson.RedissonMultiLock;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import static com.SpotLuxe.utils.RedisConstants.*;
+import static com.SpotLuxe.common.constant.RedisConstants.CACHE_SHOP_TYPE_KEY;
+import static com.SpotLuxe.common.constant.RedisConstants.CACHE_SHOP_TYPE_TTL;
 
 /**
  * <p>

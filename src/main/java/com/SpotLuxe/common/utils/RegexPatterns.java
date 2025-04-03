@@ -1,4 +1,4 @@
-package com.SpotLuxe.utils;
+package com.SpotLuxe.common.utils;
 
 /**
  * @author 虎哥

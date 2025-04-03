@@ -3,8 +3,8 @@ package com.SpotLuxe;
 import com.SpotLuxe.entity.Shop;
 import com.SpotLuxe.service.impl.ShopServiceImpl;
 
-import com.SpotLuxe.utils.CacheClient;
-import com.SpotLuxe.utils.RedisIdWorker;
+import com.SpotLuxe.common.utils.CacheClient;
+import com.SpotLuxe.common.utils.RedisIdWorker;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -14,7 +14,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import static com.SpotLuxe.utils.RedisConstants.CACHE_SHOP_KEY;
+import static com.SpotLuxe.common.constant.RedisConstants.CACHE_SHOP_KEY;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 @SpringBootTest

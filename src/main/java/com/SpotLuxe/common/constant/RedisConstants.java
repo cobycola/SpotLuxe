@@ -1,4 +1,4 @@
-package com.SpotLuxe.utils;
+package com.SpotLuxe.common.constant;
 
 public class RedisConstants {
     // 登录验证码的常量

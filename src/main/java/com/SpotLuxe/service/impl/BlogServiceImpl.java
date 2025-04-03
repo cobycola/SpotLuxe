@@ -5,8 +5,8 @@ import com.SpotLuxe.dto.Result;
 import com.SpotLuxe.dto.UserDTO;
 import com.SpotLuxe.entity.User;
 import com.SpotLuxe.service.IUserService;
-import com.SpotLuxe.utils.SystemConstants;
-import com.SpotLuxe.utils.UserHolder;
+import com.SpotLuxe.common.constant.SystemConstants;
+import com.SpotLuxe.security.context.UserHolder;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.SpotLuxe.entity.Blog;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static com.SpotLuxe.utils.RedisConstants.BLOG_LIKED_KEY;
+import static com.SpotLuxe.common.constant.RedisConstants.BLOG_LIKED_KEY;
 
 /**
  * <p>

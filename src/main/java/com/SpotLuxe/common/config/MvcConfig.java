@@ -1,7 +1,7 @@
-package com.SpotLuxe.config;
+package com.SpotLuxe.common.config;
 
-import com.SpotLuxe.utils.LoginInterceptor;
-import com.SpotLuxe.utils.RefreshTokenInterceptor;
+import com.SpotLuxe.interceptor.LoginInterceptor;
+import com.SpotLuxe.interceptor.RefreshTokenInterceptor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.StringRedisTemplate;

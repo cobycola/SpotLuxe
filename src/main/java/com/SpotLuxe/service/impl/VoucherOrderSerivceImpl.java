@@ -6,8 +6,8 @@ import com.SpotLuxe.entity.VoucherOrder;
 import com.SpotLuxe.mapper.VoucherOrderMapper;
 import com.SpotLuxe.service.ISeckillVoucherService;
 import com.SpotLuxe.service.IVoucherOrderService;
-import com.SpotLuxe.utils.RedisIdWorker;
-import com.SpotLuxe.utils.UserHolder;
+import com.SpotLuxe.common.utils.RedisIdWorker;
+import com.SpotLuxe.security.context.UserHolder;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.aop.framework.AopContext;
@@ -128,7 +128,7 @@ public class VoucherOrderSerivceImpl extends ServiceImpl<VoucherOrderMapper,Vouc
     private static final DefaultRedisScript<Long> SECKILL_SCRIPT;
     static{
         SECKILL_SCRIPT = new DefaultRedisScript<>();
-        SECKILL_SCRIPT.setLocation(new ClassPathResource("seckill.lua"));
+        SECKILL_SCRIPT.setLocation(new ClassPathResource("scripts/seckill.lua"));
         SECKILL_SCRIPT.setResultType(Long.class);
     }
 

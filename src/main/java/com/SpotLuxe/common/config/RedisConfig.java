@@ -1,4 +1,4 @@
-package com.SpotLuxe.config;
+package com.SpotLuxe.common.config;
 
 import lombok.Value;
 import org.redisson.Redisson;

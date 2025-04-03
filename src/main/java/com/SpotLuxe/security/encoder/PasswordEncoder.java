@@ -1,4 +1,4 @@
-package com.SpotLuxe.utils;
+package com.SpotLuxe.security.encoder;
 
 
 import cn.hutool.core.util.RandomUtil;

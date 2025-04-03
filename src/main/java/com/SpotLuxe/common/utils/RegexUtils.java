@@ -1,4 +1,4 @@
-package com.SpotLuxe.utils;
+package com.SpotLuxe.common.utils;
 
 import cn.hutool.core.util.StrUtil;
 

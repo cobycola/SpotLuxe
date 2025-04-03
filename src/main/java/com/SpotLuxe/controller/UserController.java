@@ -7,7 +7,7 @@ import com.SpotLuxe.dto.UserDTO;
 import com.SpotLuxe.entity.UserInfo;
 import com.SpotLuxe.service.IUserInfoService;
 import com.SpotLuxe.service.IUserService;
-import com.SpotLuxe.utils.UserHolder;
+import com.SpotLuxe.security.context.UserHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 

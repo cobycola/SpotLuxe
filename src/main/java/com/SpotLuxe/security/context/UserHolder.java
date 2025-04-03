@@ -1,4 +1,4 @@
-package com.SpotLuxe.utils;
+package com.SpotLuxe.security.context;
 
 import com.SpotLuxe.dto.UserDTO;
 

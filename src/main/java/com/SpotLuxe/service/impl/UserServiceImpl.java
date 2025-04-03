@@ -11,7 +11,7 @@ import com.SpotLuxe.dto.UserDTO;
 import com.SpotLuxe.entity.User;
 import com.SpotLuxe.mapper.UserMapper;
 import com.SpotLuxe.service.IUserService;
-import com.SpotLuxe.utils.RegexUtils;
+import com.SpotLuxe.common.utils.RegexUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -23,8 +23,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import static com.SpotLuxe.utils.RedisConstants.*;
-import static com.SpotLuxe.utils.SystemConstants.USER_NICK_NAME_PREFIX;
+import static com.SpotLuxe.common.constant.RedisConstants.*;
+import static com.SpotLuxe.common.constant.SystemConstants.USER_NICK_NAME_PREFIX;
 
 /**
  * <p>
