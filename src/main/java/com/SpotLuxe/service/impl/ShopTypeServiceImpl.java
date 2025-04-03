@@ -9,6 +9,7 @@ import com.SpotLuxe.entity.ShopType;
 import com.SpotLuxe.mapper.ShopTypeMapper;
 import com.SpotLuxe.service.IShopTypeService;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.RedissonMultiLock;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -37,8 +38,6 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
 
     @Override
     public Result queryTypeList() {
-        String redisPassword = System.getenv("REDIS_PASSWORD");
-        log.info("Redis password from environment variable: {}", redisPassword);
         //1.从redis查询商铺缓存
         String shopTypeJson = stringRedisTemplate.opsForValue().get(CACHE_SHOP_TYPE_KEY);
         List<ShopType>typeList=null;

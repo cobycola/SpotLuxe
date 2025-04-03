@@ -24,7 +24,20 @@ public class RedisConstants {
     public static final String LOCK_SHOP_KEY = "lock:shop:";
     public static final Long LOCK_SHOP_TTL = 10L;
 
+    //获取订单锁的常量
+    public static final String LOCK_ORDER_KEY = "lock:order:";
+    public static final Long LOCK_ORDER_TTL = 10L;
+    public static final Long LOCK_ORDER_WAIT_TIME = 10L;
+    public static final Long LOCK_ORDER_LEASE_TIME = 30L;
 
     // 缓存秒杀库存的常量
     public static final String SECKILL_STOCK_KEY = "seckill:stock:";
+
+    //消息队列的常量
+    public static final String SECKILL_ORDER_STREAM_KEY = "stream.orders";
+    public static final String SECKILL_ORDER_GROUP_KEY = "order.group";
+
+    //点赞
+    public static final String BLOG_LIKED_KEY = "blog:liked:";
+
 }

@@ -1,5 +1,6 @@
 package com.SpotLuxe.service;
 
+import com.SpotLuxe.dto.Result;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.SpotLuxe.entity.Blog;
 
@@ -13,4 +14,11 @@ import com.SpotLuxe.entity.Blog;
  */
 public interface IBlogService extends IService<Blog> {
 
+    Result queryBlogById(Long id);
+
+    Result queryHotBlog(Integer current);
+
+    Result queryMyBlog(Integer current);
+
+    Result likeBlog(Long id);
 }
