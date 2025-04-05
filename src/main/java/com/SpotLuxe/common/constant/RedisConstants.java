@@ -40,4 +40,9 @@ public class RedisConstants {
     //点赞
     public static final String BLOG_LIKED_KEY = "blog:liked:";
 
+    //关注用户
+    public static final String FOLLOW_USER_KEY = "follows:";
+
+    //推送
+    public static final String FEED_USER_KEY = "feed:";
 }

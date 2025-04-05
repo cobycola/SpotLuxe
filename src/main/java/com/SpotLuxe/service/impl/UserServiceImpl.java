@@ -4,6 +4,10 @@ import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.bean.copier.CopyOptions;
 import cn.hutool.core.lang.UUID;
 import cn.hutool.core.util.RandomUtil;
+import com.SpotLuxe.common.constant.SystemConstants;
+import com.SpotLuxe.entity.Blog;
+import com.SpotLuxe.service.IBlogService;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.SpotLuxe.dto.LoginFormDTO;
 import com.SpotLuxe.dto.Result;
@@ -13,13 +17,16 @@ import com.SpotLuxe.mapper.UserMapper;
 import com.SpotLuxe.service.IUserService;
 import com.SpotLuxe.common.utils.RegexUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.management.Query;
 import javax.servlet.http.HttpSession;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -41,7 +48,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
-
     @Override
     public Result sendCode(String phone, HttpSession session) {
         //1. 校验手机号
@@ -57,6 +63,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         log.debug("发送短信验证码成功，验证码:{}",code);
         //返回ok
         return Result.ok();
+    }
+
+    @Override
+    public Result queryUserById(Long userId) {
+        User user = getById(userId);
+        if(user==null){
+            return Result.fail("用户不存在");
+        }
+        UserDTO userDTO =BeanUtil.copyProperties(user, UserDTO.class);
+        return Result.ok(userDTO);
     }
 
     @Override
